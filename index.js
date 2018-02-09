@@ -4,7 +4,7 @@
 // a comment line below the rest, and push it to your branch in the repo.
 // then initiate a pull request
 //
-    // Tom McLaughlin
+    // tom
 //
 // this file was an index.js file from the class repo, Chapter 18 - Mongo, Activity 20
 
