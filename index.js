@@ -5,6 +5,7 @@
 // then initiate a pull request
 //
     // tom
+    // richard
 //
 // this file was an index.js file from the class repo, Chapter 18 - Mongo, Activity 20
 
