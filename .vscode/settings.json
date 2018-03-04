@@ -1,3 +1,7 @@
 {
+    "editor.tokenColorCustomizations": {
+        "comments": "#d42fd4"
+    },
     "git.ignoreLimitWarning": true
+    
 }
