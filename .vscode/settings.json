@@ -1,7 +1,9 @@
 {
     "editor.tokenColorCustomizations": {
-        "comments": "#d42fd4"
+        "comments": "#42d42f"
     },
+    "beautify.config": null,
+    
     "git.ignoreLimitWarning": true
     
 }

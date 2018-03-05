@@ -1,3 +1,5 @@
 module.exports = {
-  Chore: require("./chore")
+  Chore: require("./chore"),
+  User: require("./user")
+
 };

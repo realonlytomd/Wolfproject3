@@ -27,16 +27,10 @@ app.use(express.static("scripts/build"));
 // Add routes, both API and viewrs
 app.use(routes);
 const User = require("./models/user");
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
-
-
-
-
+// passport.use(new LocalStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 // start authentication passport element
-
-
 // passport.use(new LocalStrategy(
 //   function(username, password, done) {
 //     User.findOne({ username: username }, function(err, user) {
@@ -62,7 +56,6 @@ mongoose.connect(
     useMongoClient: true
   }
 );
-
 // Start the API server
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);

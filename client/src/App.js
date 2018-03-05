@@ -10,12 +10,9 @@ const App = () =>
     <div>
       <Nav />
       <Switch>
-        <Route exact path="/" component={Chores} />
-        
+        <Route exact path="/" component={Chores} />   
         <Route exact path="/chores" component={Chores} />
         <Route exact path="/chores/:id" component={Detail} />
-        
-
         <Route component={NoMatch} />
       </Switch>
     </div>
