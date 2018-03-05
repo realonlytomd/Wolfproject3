@@ -23,6 +23,7 @@
 
 .list-overflow-container li a {
   color: #d4267f;
+  border: none;
 }
 
 .list-overflow-container li:first-child {

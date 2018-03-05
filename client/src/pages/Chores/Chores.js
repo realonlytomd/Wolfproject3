@@ -57,7 +57,7 @@ class Chores extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-5">
+          <Col size="md-6 md-offset-3">
             <Jumbotron>
               <h1>Create a Chore</h1>
             </Jumbotron>
@@ -88,7 +88,9 @@ class Chores extends Component {
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-7 sm-12">
+        </Row>
+        <Row>
+          <Col size="md-8 sm-12 md-offset-2">
             <Jumbotron>
               <h1>Chores to Complete</h1>
             </Jumbotron>

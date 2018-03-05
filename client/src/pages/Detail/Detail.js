@@ -20,7 +20,7 @@ class Detail extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
+          <Col size="md-10 md-offset-1">
             <Jumbotron>
               <h1>
                 {this.state.chore.kid}: {this.state.chore.title}
@@ -29,11 +29,19 @@ class Detail extends Component {
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
+          <Col size="md-4 md-offset-2">
             <article>
               <h1>Reward:</h1>
               <h1>
                 {this.state.chore.reward}
+              </h1>
+            </article>
+          </Col>
+          <Col size="md-5">
+            <article>
+              <h1>Date Assigned:</h1>
+              <h1>
+                {this.state.chore.date}
               </h1>
             </article>
           </Col>
