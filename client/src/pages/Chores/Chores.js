@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import CompleteBtn from "../../components/CompleteBtn" ;
 
 class Chores extends Component {
   state = {
@@ -32,6 +33,15 @@ class Chores extends Component {
       .then(res => this.loadChores())
       .catch(err => console.log(err));
   };
+
+  // add function for complete chore button
+  completeChore = id => {
+    API.putChore(id)
+      .then(res => this.loadChores())
+      .catch(err => console.log(err));
+  };
+
+
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -104,6 +114,7 @@ class Chores extends Component {
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteChore(chore._id)} />
+                    <CompleteBtn onClick={() => this.putChore(chore._id)} /> 
                   </ListItem>
                 ))}
               </List>
