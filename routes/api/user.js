@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const userController = require("../../controllers/userController");
-console.log('hello');
+console.log('hello from api user.js');
 // Matches with "/api/user"
 router.route("/")
   .get(userController.findAll)

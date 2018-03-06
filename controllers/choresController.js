@@ -1,6 +1,6 @@
 const db = require("../models");
-
-// Defining methods for the booksController
+console.log("chores loaded");
+// Defining methods for the chorecontroller
 module.exports = {
   findAll: function(req, res) {
     db.Chore
