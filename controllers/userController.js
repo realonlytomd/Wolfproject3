@@ -3,7 +3,7 @@ console.log("user loaded");
 // Defining methods for the userController
 module.exports = {
   findAll: function(req, res) {
-    //   res.json("works")
+      res.json("userController works")
     db.User
       .find(req.query)
     //   .sort({ date: -1 })

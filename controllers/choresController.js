@@ -3,6 +3,7 @@ console.log("chores loaded");
 // Defining methods for the chorecontroller
 module.exports = {
   findAll: function(req, res) {
+    res.json("choresController works");
     db.Chore
       .find(req.query)
       .sort({ date: -1 })
