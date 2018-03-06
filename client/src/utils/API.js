@@ -5,11 +5,11 @@ export default {
   getChores: function() {
     return axios.get("/api/chores");
   },
-  // Gets the book with the given id
+  // Gets the chore with the given id
   getChore: function(id) {
     return axios.get("/api/chores/" + id);
   },
-  // Deletes the book with the given id
+  // Deletes the chore with the given id
   deleteChore: function(id) {
     return axios.delete("/api/chores/" + id);
   },
