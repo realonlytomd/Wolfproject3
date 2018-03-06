@@ -10,7 +10,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 class User extends Component {
   state = {
     username: "",
-    password: "",
+    password: ""
    
   };
 
@@ -18,17 +18,17 @@ class User extends Component {
     this.loadUser();
   }
 
-  load User = () => {
-    API.get User()
+  loadUser = () => {
+    API.getUser()
       .then(res =>
-        this.setState({  User: res.data, name: "", password: "" })
+        this.setState({ User: res.data, name: "", password: "" })
       )
       .catch(err => console.log(err));
   };
 
-  deleteChore = id => {
+  deleteUser = id => {
     API.deleteUser(id)
-      .then(res => this.load User())
+      .then(res => this.loadUser())
       .catch(err => console.log(err));
   };
 
@@ -43,11 +43,11 @@ class User extends Component {
     event.preventDefault();
     if (this.state.user && this.state.password) {
       API.saveUser({
-        title: this.state.user,
-        kid: this.state.password
+        user: this.state.user,
+        password: this.state.password
         
       })
-        .then(res => this.load User())
+        .then(res => this.loadUser())
         .catch(err => console.log(err));
     }
   };
@@ -86,11 +86,11 @@ class User extends Component {
             <Jumbotron>
               <h1> User On My List</h1>
             </Jumbotron>
-            {this.state. User.length ? (
+            {this.state.User.length ? (
               <List>
                 {this.state. User.map(chore => (
                   <ListItem key={chore._id}>
-                    <Link to={"/ Login/" + user._id}>
+                    <Link to={"/Login/" + user._id}>
                       <strong>
                         {user.username} by {user.password}
                       </strong>
