@@ -22,6 +22,8 @@
 }
 
 .list-overflow-container li a {
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
   color: #8a2be2;
   border: none;
 }
