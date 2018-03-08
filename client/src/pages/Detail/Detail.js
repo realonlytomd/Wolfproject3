@@ -30,20 +30,20 @@ class Detail extends Component {
         </Row>
         <Row>
           <Col size="md-4 md-offset-2">
-            <article>
-              <h1>Reward:</h1>
-              <h1>
+            <Jumbotron>
+              <h2>Reward:</h2>
+              <h2>
                 {this.state.chore.reward}
-              </h1>
-            </article>
+              </h2>
+            </Jumbotron>
           </Col>
-          <Col size="md-5">
-            <article>
-              <h1>Date Assigned:</h1>
-              <h1>
+          <Col size="md-4">
+            <Jumbotron>
+              <h2>Date Assigned:</h2>
+              <h2>
                 {String(this.state.chore.date).slice(0, 10)}
-              </h1>
-            </article>
+              </h2>
+            </Jumbotron>
           </Col>
         </Row>
         <Row>
