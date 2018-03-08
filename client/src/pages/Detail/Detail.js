@@ -41,7 +41,7 @@ class Detail extends Component {
             <article>
               <h1>Date Assigned:</h1>
               <h1>
-                {this.state.chore.date}
+                {String(this.state.chore.date).slice(0, 10)}
               </h1>
             </article>
           </Col>
