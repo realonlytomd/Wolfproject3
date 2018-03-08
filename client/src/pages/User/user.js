@@ -11,7 +11,6 @@ class User extends Component {
   state = {
     username: "",
     password: ""
-   
   };
 
   componentDidMount() {
@@ -21,7 +20,7 @@ class User extends Component {
   loadUser = () => {
     API.getUser()
       .then(res =>
-        this.setState({ User: res.data, name: "", password: "" })
+        this.setState({ User: res.data, username: "", password: "" })
       )
       .catch(err => console.log(err));
   };
@@ -43,16 +42,15 @@ class User extends Component {
     event.preventDefault();
     if (this.state.user && this.state.password) {
       API.saveUser({
-        user: this.state.user,
-        password: this.state.password
-        
+        username: this.state.user,
+        password: this.state.password       
       })
         .then(res => this.loadUser())
         .catch(err => console.log(err));
     }
   };
 
-  render() {
+  render(){
     return (
       <Container fluid>
         <Row>
@@ -64,7 +62,7 @@ class User extends Component {
               <Input
                 value={this.state.user}
                 onChange={this.handleInputChange}
-                name="user"
+                name="username"
                 placeholder="User Name (required)"
               />
               <Input
@@ -88,8 +86,8 @@ class User extends Component {
             </Jumbotron>
             {this.state.User.length ? (
               <List>
-                {this.state. User.map(chore => (
-                  <ListItem key={chore._id}>
+                {this.state. User.map(user => (
+                  <ListItem key={user._id}>
                     <Link to={"/Login/" + user._id}>
                       <strong>
                         {user.username} by {user.password}
@@ -108,5 +106,6 @@ class User extends Component {
     );
   }
 }
+
 
 export default  User;
