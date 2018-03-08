@@ -70,6 +70,7 @@ class Chores extends Component {
           <Col size="md-6 md-offset-3">
             <Jumbotron>
               <h1>Create a Chore</h1>
+              <p>Enter the chore, who's responsible, and their reward</p>
             </Jumbotron>
             <form>
               <Input
