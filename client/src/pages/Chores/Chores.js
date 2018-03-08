@@ -28,7 +28,7 @@ class Chores extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteChore = id => {
+  deleteAchore = id => {
     API.deleteChore(id)
       .then(res => this.loadChores())
       .catch(err => console.log(err));
@@ -36,7 +36,7 @@ class Chores extends Component {
 
   // add function for complete chore button
   completeChore = id => {
-    API.putChore(id)
+    API.saveChore(id)
       .then(res => this.loadChores())
       .catch(err => console.log(err));
   };
@@ -113,8 +113,8 @@ class Chores extends Component {
                         {chore.kid}: {chore.title}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteChore(chore._id)} />
-                    <CompleteBtn onClick={() => this.putChore(chore._id)} /> 
+                    <DeleteBtn onClick={() => this.deleteAchore(chore._id)} />
+                    <CompleteBtn onClick={() => this.completeChore(chore._id)} /> 
                   </ListItem>
                 ))}
               </List>
