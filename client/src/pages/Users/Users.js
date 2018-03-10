@@ -9,7 +9,7 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Users extends Component {
   state = {
-    users : [],
+    users: [],
     username: "",
     password: ""
   };
