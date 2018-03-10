@@ -43,7 +43,7 @@ module.exports = {
   },
   findByIdUser: function(req, res) {
     db.User
-      .findById(req.params.id).poplulate("chores")
+      .findById(req.params.id)//.poplulate("chores")
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
