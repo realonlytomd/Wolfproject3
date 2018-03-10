@@ -48,7 +48,7 @@ class Detail extends Component {
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Chores</Link>
+            <Link to="/Chores">← Back to Chores</Link>
           </Col>
         </Row>
       </Container>
