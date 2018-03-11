@@ -11,7 +11,10 @@ const Nav = () =>
           <span className="icon-bar" />
         </button>
         <a href="/chores" className="navbar-brand">
-          React Chore List
+          Chore List
+        </a>
+        <a href="/users" className="navbar-brand">
+          User List
         </a>
       </div>
     </div>
