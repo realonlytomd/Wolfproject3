@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import CompleteBtn from "../../components/CompleteBtn" ;
+import CompleteBtn from "../../components/CompleteBtn";
+import WOW from "wowjs";
 
 class Chores extends Component {
   state = {
@@ -18,6 +19,8 @@ class Chores extends Component {
 
   componentDidMount() {
     this.loadChores();
+    const wow = new WOW.WOW();
+    wow.init();
   }
 
   loadChores = () => {
@@ -70,7 +73,7 @@ class Chores extends Component {
           <Col size="md-6 md-offset-3">
             <Jumbotron>
               <h1>Create a Chore</h1>
-              <p>Enter the chore, who's responsible, and their reward.</p>
+              <p className="wow pulse infinite">Enter the chore, who's responsible, and their reward.</p>
             </Jumbotron>
             <form>
               <Input
