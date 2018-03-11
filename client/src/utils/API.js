@@ -27,7 +27,7 @@ export default {
   },
   //deletes a user with a given id
   deleteUser: function(id) {
-    return axios.delete("/api/users" + id);
+    return axios.delete("/api/users/" + id);
   },
   // saves a user to the database
   saveUser: function(userData) {

@@ -56,9 +56,9 @@ class Users extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-6 md-offset-3">
             <Jumbotron>
-              <h1>Current User Login</h1>
+              <h1>User Login</h1>
             </Jumbotron>
             <form>
               <Input
@@ -77,13 +77,13 @@ class Users extends Component {
                 disabled={!(this.state.username && this.state.password)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Login
+                Login
               </FormBtn>
             </form>
           </Col>
           <Col size="md-8 sm-12 md-offset-2">
             <Jumbotron>
-              <h1> Users</h1>
+              <h1>Users</h1>
             </Jumbotron>
             {this.state.users.length ? (
               <List>
