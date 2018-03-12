@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chores from "./pages/Chores";
 import User from "./pages/User";
 import Detail from "./pages/Detail";
+import Users from "./pages/Users";
+import DetailUser from "./pages/DetailUser";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
@@ -11,6 +13,7 @@ const App = () =>
     <div>
       <Nav />
       <Switch>
+<<<<<<< HEAD
         <Route exact path="/" component={Chores} />   
         <Route exact path="/chores" component={Chores} />
         <Route exact path="/chores/:id" component={Detail} />
@@ -19,6 +22,13 @@ const App = () =>
         <Route exact path="/user" component={User} />
         <Route exact path="/user/:id" component={Detail} />-->
          
+=======
+        <Route exact path="/" component={Users} />
+        <Route exact path="/chores" component={Chores} />
+        <Route exact path="/chores/:id" component={Detail} />   
+        <Route exact path="/users" component={Users} />
+        <Route exact path="/users/:id" component={DetailUser} />
+>>>>>>> 4513b82c1015814854aad05d38d27249bb327ce1
         <Route component={NoMatch} />
       </Switch>
     </div>

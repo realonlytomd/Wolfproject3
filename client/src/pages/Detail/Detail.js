@@ -9,7 +9,7 @@ class Detail extends Component {
     chore: {}
   };
   // When this component mounts, grab the chore with the _id of this.props.match.params.id
-  // e.g. localhost:3000/chores/599dcb67f0f16317844583fc
+  
   componentDidMount() {
     API.getChore(this.props.match.params.id)
       .then(res => this.setState({ chore: res.data }))
@@ -20,27 +20,35 @@ class Detail extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
+          <Col size="md-10 md-offset-1">
             <Jumbotron>
               <h1>
-                {this.state.chore.title} by {this.state.chore.kid}
+                {this.state.chore.kid}: {this.state.chore.title}
               </h1>
             </Jumbotron>
           </Col>
         </Row>
         <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Reward</h1>
-              <p>
+          <Col size="md-4 md-offset-2">
+            <Jumbotron>
+              <h2>Reward:</h2>
+              <h2>
                 {this.state.chore.reward}
-              </p>
-            </article>
+              </h2>
+            </Jumbotron>
+          </Col>
+          <Col size="md-4">
+            <Jumbotron>
+              <h2>Date Assigned:</h2>
+              <h2>
+                {String(this.state.chore.date).slice(0, 10)}
+              </h2>
+            </Jumbotron>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Kids</Link>
+            <Link to="/Chores">← Back to Chores</Link>
           </Col>
         </Row>
       </Container>

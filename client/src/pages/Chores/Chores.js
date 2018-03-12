@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import CompleteBtn from "../../components/CompleteBtn" ;
 
 class Chores extends Component {
   state = {
@@ -27,11 +28,20 @@ class Chores extends Component {
       .catch(err => console.log(err));
   };
 
-  deleteChore = id => {
+  deleteAchore = id => {
     API.deleteChore(id)
       .then(res => this.loadChores())
       .catch(err => console.log(err));
   };
+
+  // add function for complete chore button
+  completeChore = id => {
+    API.saveChore(id)
+      .then(res => this.loadChores())
+      .catch(err => console.log(err));
+  };
+
+
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -57,28 +67,29 @@ class Chores extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-6 md-offset-3">
             <Jumbotron>
-              <h1>What Chores Should I Do?</h1>
+              <h1>Create a Chore</h1>
+              <p>Enter the chore, who's responsible, and their reward.</p>
             </Jumbotron>
             <form>
               <Input
                 value={this.state.title}
                 onChange={this.handleInputChange}
                 name="title"
-                placeholder="Chore Name (required)"
+                placeholder="Name of Chore (required)"
               />
               <Input
                 value={this.state.kid}
                 onChange={this.handleInputChange}
                 name="kid"
-                placeholder="Kid (required)"
+                placeholder="Child (required)"
               />
               <TextArea
                 value={this.state.reward}
                 onChange={this.handleInputChange}
                 name="reward"
-                placeholder="Reward (Optional)"
+                placeholder="Reward (Points or Tangible)"
               />
               <FormBtn
                 disabled={!(this.state.kid && this.state.title)}
@@ -88,9 +99,11 @@ class Chores extends Component {
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
+        </Row>
+        <Row>
+          <Col size="md-8 sm-12 md-offset-2">
             <Jumbotron>
-              <h1>Chores On My List</h1>
+              <h1>Chores to Complete</h1>
             </Jumbotron>
             {this.state.chores.length ? (
               <List>
@@ -98,15 +111,16 @@ class Chores extends Component {
                   <ListItem key={chore._id}>
                     <Link to={"/chores/" + chore._id}>
                       <strong>
-                        {chore.title} by {chore.kid}
+                        {chore.kid}: {chore.title}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteChore(chore._id)} />
+                    <DeleteBtn onClick={() => this.deleteAchore(chore._id)} />
+                    <CompleteBtn onClick={() => this.completeChore(chore._id)} /> 
                   </ListItem>
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>No Chores to Do</h3>
             )}
           </Col>
         </Row>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // const mongoose = require("mongoose");
 // const Schema = mongoose.Schema;
 
@@ -14,3 +15,17 @@
 // const User = mongoose.model("User", userSchema);
 
 // module.exports = User;
+=======
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+  username: { type: String, required: true },
+  password: { type: String, required: true },
+  //chore: [{ type: Schema.Types.ObjectID, ref: "Chore" }]
+});
+
+const User = mongoose.model("User", userSchema);
+
+module.exports = User;
+>>>>>>> 4513b82c1015814854aad05d38d27249bb327ce1
