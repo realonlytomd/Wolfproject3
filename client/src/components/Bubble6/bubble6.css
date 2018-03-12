@@ -1,0 +1,10 @@
+.ridge {
+    border-style: ridge;
+    border-color: whitesmoke;
+    height: 150px;
+    width: 150px;
+    background-color: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0;
+}
