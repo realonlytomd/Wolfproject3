@@ -1,9 +1,10 @@
-.ridge {
-    border-style: ridge;
-    border-color: purple;
-    height: 80px;
-    width: 80px;
-    background-color: none;
+.solid {
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 2px;
+    height: 70px;
+    width: 70px;
+
     border-radius: 50%;
     display: inline-block;
     opacity: 0;

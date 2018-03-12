@@ -1,8 +1,8 @@
-.ridge {
-    border-style: ridge;
+.solid2 {
+    border-style: solid;
     border-color: whitesmoke;
-    height: 400px;
-    width: 400px;
+    height: 100px;
+    width: 100px;
     background-color: none;
     border-radius: 50%;
     display: inline-block;

@@ -78,7 +78,7 @@ class Chores extends Component {
           <Col size="md-1 md-offset-4">
             <Bubble4 />
           </Col>
-          <Col size="md-1 md-offset-1">
+          <Col size="md-1 md-offset-2">
             <Bubble5 />
           </Col>
         </Row>

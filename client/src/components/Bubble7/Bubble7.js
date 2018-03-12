@@ -2,7 +2,7 @@ import React from "react";
 import "./bubble7.css";
 
 const Bubble7 = ({ children }) =>
-  <div className="ridge wow fadeInUpBig infinite">
+  <div className="solid7 wow fadeInUpBig infinite">
     {children}
   </div>;
 
