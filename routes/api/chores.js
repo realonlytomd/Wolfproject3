@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const choresController = require("../../controllers/choresController");
-
+console.log('from api/chores hello');
 // Matches with "/api/chores"
 router.route("/")
   .get(choresController.findAll)
