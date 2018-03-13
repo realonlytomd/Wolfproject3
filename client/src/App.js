@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Chores from "./pages/Chores";
-import User from "./pages/User";
 import Detail from "./pages/Detail";
 import Users from "./pages/Users";
 import DetailUser from "./pages/DetailUser";

@@ -3,7 +3,6 @@ const db = require("../models");
 // Defining methods for the choresController
 module.exports = {
   findAll: function(req, res) {
-    res.json("choresController works");
     db.Chore
       .find(req.query)
       .sort({ date: -1 })
@@ -44,7 +43,7 @@ module.exports = {
   },
   findByIdUser: function(req, res) {
     db.User
-      .findById(req.params.id)//.poplulate("chores")
+      .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
