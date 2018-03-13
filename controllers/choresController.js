@@ -1,11 +1,6 @@
 const db = require("../models");
-<<<<<<< HEAD
-console.log("chores loaded");
-// Defining methods for the chorecontroller
-=======
 
 // Defining methods for the choresController
->>>>>>> 4513b82c1015814854aad05d38d27249bb327ce1
 module.exports = {
   findAll: function(req, res) {
     res.json("choresController works");

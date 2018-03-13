@@ -13,22 +13,11 @@ const App = () =>
     <div>
       <Nav />
       <Switch>
-<<<<<<< HEAD
-        <Route exact path="/" component={Chores} />   
-        <Route exact path="/chores" component={Chores} />
-        <Route exact path="/chores/:id" component={Detail} />
-      
-        <!--<Route exact path="/" component={User} />
-        <Route exact path="/user" component={User} />
-        <Route exact path="/user/:id" component={Detail} />-->
-         
-=======
         <Route exact path="/" component={Users} />
         <Route exact path="/chores" component={Chores} />
         <Route exact path="/chores/:id" component={Detail} />   
         <Route exact path="/users" component={Users} />
         <Route exact path="/users/:id" component={DetailUser} />
->>>>>>> 4513b82c1015814854aad05d38d27249bb327ce1
         <Route component={NoMatch} />
       </Switch>
     </div>
