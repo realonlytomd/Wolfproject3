@@ -76,21 +76,21 @@ class Chores extends Component {
       <Container fluid>
         <Row>
           <Col size="md-1 md-offset-4">
-            <Bubble4 />
+            {/* <Bubble4 /> */}
           </Col>
           <Col size="md-1 md-offset-2">
-            <Bubble5 />
+            {/* <Bubble5 /> */}
           </Col>
         </Row>
         <Row>
           <Col size="md-1">
-            <Bubble1 />
+            {/* <Bubble1 /> */}
           </Col>
           <Col size="md-1">
-            <Bubble2 />
+            {/* <Bubble2 /> */}
           </Col>
           <Col size="md-1">
-            <Bubble3 />
+            {/* <Bubble3 /> */}
           </Col>
           <Col size="md-6">
             <Jumbotron>
@@ -125,10 +125,10 @@ class Chores extends Component {
             </form>
           </Col>
           <Col size="md-2">
-            <Bubble6 />
+            {/* <Bubble6 /> */}
           </Col>
           <Col size="md-1 md-offset-0">
-            <Bubble7 />
+            {/* <Bubble7 /> */}
           </Col>
         </Row>
         <Row>
