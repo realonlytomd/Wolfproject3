@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import WOW from "wowjs";
 
 class Users extends Component {
   state = {
@@ -16,6 +17,8 @@ class Users extends Component {
 
   componentDidMount() {
     this.loadUsers();
+    const wow = new WOW.WOW();
+    wow.init();
   }
 
   loadUsers = () => {
@@ -58,7 +61,7 @@ class Users extends Component {
         <Row>
           <Col size="md-6 md-offset-3">
             <Jumbotron>
-              <h1>User Login</h1>
+              <h1 className="wow rubberBand" data-wow-delay="3.0s">User Login</h1>
             </Jumbotron>
             <form>
               <Input
@@ -83,7 +86,7 @@ class Users extends Component {
           </Col>
           <Col size="md-8 sm-12 md-offset-2">
             <Jumbotron>
-              <h1>Users</h1>
+              <h1 className="wow rubberBand" data-wow-delay="3.0s">Users</h1>
             </Jumbotron>
             {this.state.users.length ? (
               <List>
@@ -91,7 +94,7 @@ class Users extends Component {
                   <ListItem key={user._id}>
                     <Link to={"/Users/" + user._id}>
                       <strong>
-                        Username: {user.username} Password: {user.password}
+                        Username: {user.username} | Password: {user.password}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteUser(user._id)} />

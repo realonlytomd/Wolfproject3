@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import Jumbotron from "../../components/Jumbotron";
+import Bubble1 from "../../components/Bubble1";
+import Bubble2 from "../../components/Bubble2";
+import Bubble3 from "../../components/Bubble3";
+import Bubble4 from "../../components/Bubble4";
+import Bubble5 from "../../components/Bubble5";
+import Bubble6 from "../../components/Bubble6";
+import Bubble7 from "../../components/Bubble7";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import CompleteBtn from "../../components/CompleteBtn" ;
+import CompleteBtn from "../../components/CompleteBtn";
+import WOW from "wowjs";
 
 class Chores extends Component {
   state = {
@@ -18,6 +26,8 @@ class Chores extends Component {
 
   componentDidMount() {
     this.loadChores();
+    const wow = new WOW.WOW();
+    wow.init();
   }
 
   loadChores = () => {
@@ -40,8 +50,6 @@ class Chores extends Component {
       .then(res => this.loadChores())
       .catch(err => console.log(err));
   };
-
-
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -67,10 +75,27 @@ class Chores extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6 md-offset-3">
+          <Col size="md-1 md-offset-4">
+            {/* <Bubble4 /> */}
+          </Col>
+          <Col size="md-1 md-offset-2">
+            {/* <Bubble5 /> */}
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-1">
+            {/* <Bubble1 /> */}
+          </Col>
+          <Col size="md-1">
+            {/* <Bubble2 /> */}
+          </Col>
+          <Col size="md-1">
+            {/* <Bubble3 /> */}
+          </Col>
+          <Col size="md-6">
             <Jumbotron>
-              <h1>Create a Chore</h1>
-              <p>Enter the chore, who's responsible, and their reward.</p>
+              <h1 className="wow slideInRight" data-wow-delay="1.0s">Create a Chore</h1>
+              <p className="wow pulse infinite" data-wow-delay="5.0s">Enter the chore, who's responsible, and their reward.</p>
             </Jumbotron>
             <form>
               <Input
@@ -99,11 +124,17 @@ class Chores extends Component {
               </FormBtn>
             </form>
           </Col>
+          <Col size="md-2">
+            {/* <Bubble6 /> */}
+          </Col>
+          <Col size="md-1 md-offset-0">
+            {/* <Bubble7 /> */}
+          </Col>
         </Row>
         <Row>
           <Col size="md-8 sm-12 md-offset-2">
             <Jumbotron>
-              <h1>Chores to Complete</h1>
+              <h1 className="wow slideInRight" data-wow-delay="1.0s">Chores to Complete</h1>
             </Jumbotron>
             {this.state.chores.length ? (
               <List>

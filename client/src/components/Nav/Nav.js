@@ -10,11 +10,11 @@ const Nav = () =>
           <span className="icon-bar" /> <span className="icon-bar" />
           <span className="icon-bar" />
         </button>
-        <a href="/chores" className="navbar-brand">
-          Chore List
-        </a>
         <a href="/users" className="navbar-brand">
           User List
+        </a>
+        <a href="/chores" className="navbar-brand">
+          Chore List
         </a>
       </div>
     </div>
