@@ -5,7 +5,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, FormBtnNo, FormBtn } from "../../components/Form";
 import WOW from "wowjs";
 
 class Users extends Component {
@@ -76,12 +76,19 @@ class Users extends Component {
                 name="password"
                 placeholder="Password (required)"
               />
-              <FormBtn
-                disabled={!(this.state.username && this.state.password)}
-                onClick={this.handleFormSubmit}
-              >
-                Login
-              </FormBtn>
+              {!(this.state.username && this.state.password) ? (
+                <FormBtn
+                  disabled
+                >
+                  Fill in the Forms!
+                </FormBtn>
+                ) : (
+                <FormBtnNo
+                  onClick={this.handleFormSubmit}
+                >
+                  Click to Login
+                </FormBtnNo>
+                )}
             </form>
           </Col>
           <Col size="md-8 sm-12 md-offset-2">
