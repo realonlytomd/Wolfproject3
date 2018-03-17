@@ -12,9 +12,10 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, TextArea, FormBtnNo, FormBtn } from "../../components/Form";
 import CompleteBtn from "../../components/CompleteBtn";
 import WOW from "wowjs";
+import Nav from "../../components/Nav";
 
 class Chores extends Component {
   state = {
@@ -74,6 +75,7 @@ class Chores extends Component {
   render() {
     return (
       <Container fluid>
+        <Nav />
         <Row>
           <Col size="md-1 md-offset-4">
             {/* <Bubble4 /> */}
@@ -116,12 +118,19 @@ class Chores extends Component {
                 name="reward"
                 placeholder="Reward (Points or Tangible)"
               />
-              <FormBtn
-                disabled={!(this.state.kid && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit Chore
-              </FormBtn>
+              {!(this.state.title && this.state.kid) ? (
+                <FormBtn
+                  disabled
+                >
+                  Fill in the Form!
+                </FormBtn>
+                ) : (
+                <FormBtnNo
+                  onClick={this.handleFormSubmit}
+                >
+                  Click to Submit Chore
+                </FormBtnNo>
+                )}
             </form>
           </Col>
           <Col size="md-2">

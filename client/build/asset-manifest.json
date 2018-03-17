@@ -1,12 +1,7 @@
 {
-
-  "main.css": "static/css/main.5a30127f.css",
-  "main.css.map": "static/css/main.5a30127f.css.map",
-  "main.js": "static/js/main.9d56df79.js",
-  "main.js.map": "static/js/main.9d56df79.js.map"
-
-  "main.js": "static/js/main.43222d42.js",
-  "main.js.map": "static/js/main.43222d42.js.map"
-
-
+  "main.css": "static/css/main.0125f51a.css",
+  "main.css.map": "static/css/main.0125f51a.css.map",
+  "main.js": "static/js/main.c52f4b1a.js",
+  "main.js.map": "static/js/main.c52f4b1a.js.map",
+  "static\\media\\giphy-tumblr.gif": "static/media/giphy-tumblr.ec2c90eb.gif"
 }
