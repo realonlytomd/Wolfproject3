@@ -15,6 +15,7 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import CompleteBtn from "../../components/CompleteBtn";
 import WOW from "wowjs";
+import Nav from "../../components/Nav";
 
 class Chores extends Component {
   state = {
@@ -74,6 +75,7 @@ class Chores extends Component {
   render() {
     return (
       <Container fluid>
+        <Nav />
         <Row>
           <Col size="md-1 md-offset-4">
             {/* <Bubble4 /> */}

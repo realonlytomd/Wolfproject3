@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
+import Nav from "../../components/Nav";
 
 class DetailUser extends Component {
   state = {
@@ -19,6 +20,7 @@ class DetailUser extends Component {
   render() {
     return (
       <Container fluid>
+        <Nav />
         <Row>
           <Col size="md-10 md-offset-1">
             <Jumbotron>
