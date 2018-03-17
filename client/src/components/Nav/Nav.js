@@ -16,6 +16,9 @@ const Nav = () =>
         <a href="/chores" className="navbar-brand">
           Chore List
         </a>
+        <a href="/" className="navbar-brand">
+          About
+        </a>
       </div>
     </div>
   </nav>;
