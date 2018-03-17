@@ -43,7 +43,7 @@ class About extends Component {
                 </Col>
                 <Col size="md-3">
                       <Jumbotron>
-                          <p className><strong>Developers:</strong> <br />Tom McLaughlin <br /> Tim McWilliams<br /> Richard Nguyen<br /> David Bierma</p>
+                          <p><strong>Developers:</strong> <br />Tom McLaughlin <br /> Tim McWilliams<br /> Richard Nguyen<br /> David Bierma</p>
                       </Jumbotron>
                 </Col>
                 <Col size="md-3">
