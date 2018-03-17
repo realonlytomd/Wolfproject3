@@ -3,6 +3,7 @@ import { Link, Route } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import API from "../../utils/API";
 import Jumbotron from "../../components/Jumbotron";
+import Jumbotron2 from "../../components/Jumbotron2";
 import "./About.css";
 import WOW from "wowjs";
 import logo from "../../../src/img/giphy-tumblr.gif";
@@ -26,7 +27,7 @@ class About extends Component {
               <Row>
                 <Col size="md-6">
                     <div className="background">
-                        <Jumbotron>
+                        <Jumbotron2>
                           <p>Welcome to our chores app! <br />Create a login to keep track of your kids chores.</p>
                             <div className="wow pulse infinite" data-wow-delay="5.0s">
                             <Route render={({ history}) => (
@@ -38,19 +39,21 @@ class About extends Component {
                                 </button>
                             )} />
                             </div>                
-                        </Jumbotron>
+                        </Jumbotron2>
                     </div>
                 </Col>
                 <Col size="md-3">
+
                       <Jumbotron>
                           <p><strong>Developers:</strong> <br />Tom McLaughlin <br /> Tim McWilliams<br /> Richard Nguyen<br /> David Bierma</p>
                       </Jumbotron>
+
                 </Col>
                 <Col size="md-3">
                     <div className="jumbo">
-                      <Jumbotron>
+                      <Jumbotron2 style={{ height: 320 }}>
                             <img className="img-responsive" src={logo} alt="loading..." />
-                      </Jumbotron>
+                      </Jumbotron2>
                     </div>
                 </Col>
               </Row>
