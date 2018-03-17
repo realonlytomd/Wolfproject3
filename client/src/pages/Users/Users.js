@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtnNo, FormBtn } from "../../components/Form";
 import WOW from "wowjs";
+import Nav from "../../components/Nav";
 
 class Users extends Component {
   state = {
@@ -58,6 +59,7 @@ class Users extends Component {
   render() {
     return (
       <Container fluid>
+        <Nav />
         <Row>
           <Col size="md-6 md-offset-3">
             <Jumbotron>
