@@ -5,7 +5,6 @@ import Detail from "./pages/Detail";
 import Users from "./pages/Users";
 import DetailUser from "./pages/DetailUser";
 import NoMatch from "./pages/NoMatch";
- 
 import About from "./pages/About";
 
 const App = () =>
