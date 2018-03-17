@@ -94,16 +94,20 @@ class Users extends Component {
             </form>
           </Col>
           <Col size="md-8 sm-12 md-offset-2">
-            <Jumbotron>
-              <h1 className="wow rubberBand" data-wow-delay="3.0s">Users</h1>
-            </Jumbotron>
+            {this.state.users.length ? (
+              <Jumbotron>
+                <h1 className="wow rubberBand" data-wow-delay="3.0s">Welcome</h1>
+              </Jumbotron> 
+            ) : (
+              <h3></h3>
+            )}
             {this.state.users.length ? (
               <List>
                 {this.state.users.map(user => (
                   <ListItem key={user._id}>
-                    <Link to={"/Users/" + user._id}>
+                    <Link to={"/chores/"}>
                       <strong>
-                        Username: {user.username} | Password: {user.password}
+                        {user.username}, click here to create chores!
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteUser(user._id)} />
@@ -111,7 +115,7 @@ class Users extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Users to Display</h3>
+              <h3 style={{ textAlign: 'center' }}>No User to Display</h3>
             )}
           </Col>
         </Row>
