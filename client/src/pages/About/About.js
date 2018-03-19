@@ -28,7 +28,7 @@ class About extends Component {
                 <Col size="md-6">
                     <div className="background">
                         <Jumbotron2>
-                          <p>Welcome to our chores app! <br />Create a login to keep track of your kids chores.</p>
+                          <p style={{paddingTop: '60px'}}>Welcome to our chores app! <br />Create a login to keep track of your kids chores.</p>
                             <div className="wow pulse infinite" data-wow-delay="5.0s">
                             <Route render={({ history}) => (
                                 <button className="btn btn-default" 
